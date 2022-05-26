@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { wait } from "@testing-library/user-event/dist/utils";
 import App from "./App";
 import RadioButtons from "./components/RadioButton";
+import { Rootprovider } from "./RootContext";
 
 afterEach(cleanup);
 describe("dropdown testing", () => {
@@ -22,23 +23,15 @@ describe("dropdown testing", () => {
   it("if its renders Radio Button successfully", () => {
     render(<RadioButtons />);
   });
-  //   it("dropdown ele change", () => {
-  //     render(<App />);
-  //     const ele = screen.getAllByTestId("combobox");
-  //     userEvent.selectOptions(screen.getAllByRole("combobox"), ele);
-  //     expect(ele?.selected).toBeTruthy();
-  //     expect(ele?.value).toBe("AU");
-  //   });
-  //  await wait(() => {
-  //     fireEvent.change(selectElement, { target: { value: "AU" } });
-  //     expect(selectElement.value).toBe("AU");
-  //   });
-  // it("should correctly set default option", () => {
-  //   render(<App />);
-  //   expect(
-  //     screen.getElementsByClassName("dropdown-item", {
-  //       name: "Select Nationality:",
-  //     }).selected
-  //   ).toBe(true);
+  // it("dropdown ele change", () => {
+  //   render(
+  //     <Rootprovider>
+  //       <App />
+  //     </Rootprovider>
+  //   );
+  //   const ele = screen.queryAllByTestId("test-span");
+  //   userEvent.selectOptions(screen.getAllByRole("combobox"), ele);
+  //   expect(ele?.selected).toBeTruthy();
+  //   expect(ele?.value).toBe("AU");
   // });
 });
