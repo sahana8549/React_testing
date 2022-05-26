@@ -1,0 +1,11 @@
+.button {
+  flex-direction: row;
+}
+label {
+  margin-left: 10px;
+}
+select {
+  width: 100%;
+  border-color: rgb(221, 220, 220);
+  padding: 5px;
+}
